@@ -1,0 +1,20 @@
+# Configuração Global do Relaxation Audio Engine 1.0
+engine:
+  sample_rate: 44100
+  channels: 2
+  chunk_duration_sec: 10.0
+  internal_dtype: "float32"
+  export_format: "WAV"
+  export_subtype: "PCM_24"
+  default_seed: 42
+
+paths:
+  profiles_dir: "config/profiles"
+  assets_dir: "audios"
+  output_dir: "output"
+
+mastering_defaults:
+  target_lufs: -16.0
+  max_true_peak_dbfs: -1.0
+  fade_in_sec: 5.0
+  fade_out_sec: 8.0

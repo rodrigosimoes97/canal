@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relaxation-audio-engine"
+version = "1.0.0"
+description = "Professional relaxation, ambient and generative audio engine in Python"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Audio Engineering Team" }
+]
+dependencies = [
+    "numpy>=2.0.0",
+    "scipy>=1.15.0",
+    "soundfile>=0.13.0",
+    "pyyaml>=6.0.0",
+    "pyloudnorm>=0.2.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
